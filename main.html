@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>claus</title>
+    <script src="js/annyang.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/estylo.css" media="screen" title="no title" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    var commands = {
+  'hello':     function()  {alert("Mensaje manejado con JavaScript");},
+  };
+  //esto es solo para depurar
+  annyang.debug();
+  // inicialize nuevo comando
+  annyang.addCommands(commands);
+
+  //comensamos la llamada al evento
+  annyang.start();
+  annyang.setLanguage('en');
+</script>
+  </head>
+  <body>
+
+
+  </body>
+</html>
