@@ -9,8 +9,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
     var commands = {
-  'hello':     function()  {alert("Mensaje manejado con JavaScript");},
+
+      'page':     function() {var url = 'chrome-extension://chphlpgkkbolifaimnlloiipkdnihall/onetab.html';
+                              window.open(url);},
+      'help':     function() {var url = 'file:///C:/xampp/htdocs/annyang-master/demo/index.html';
+                              window.open(url);},
+  'música':     function() {var url = 'https://www.youtube.com/watch?v=wyx6JDQCslE&list=PLDA20D0DF0E7C2C44';
+                          window.open(url);},
+  'busca *tag': function(tag) {var url = 'https://www.google.com.pe/?gfe_rd=cr&ei=3gF6V5z8Lauw8wf_nLrYDQ#q='+tag;
+                  window.open(url);
+                  $.getJSON(url);},
+  'facebook': function() {var url = 'https://facebook.com';
+                          window.open(url);},
+  'youtube': function() {var url = 'https://youtube.com';
+                        window.open(url);},
+  'googledrive': function() {var url = 'https://drive.google.com/drive/my-drive';
+                        window.open(url);},
+  'hangout': function() {var url = 'https://hangouts.google.com/';
+                              window.open(url);},
   };
+
   //esto es solo para depurar
   annyang.debug();
   // inicialize nuevo comando
